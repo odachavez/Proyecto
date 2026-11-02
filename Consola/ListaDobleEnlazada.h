@@ -1,15 +1,27 @@
 #ifndef LISTADOBLEENLAZADA_H
 #define LISTADOBLEENLAZADA_H
 #include <iostream>
-#include "Nodo.h"
+
 using namespace std;
+
+
+template <typename T>
+class Nodo {
+public:
+    T dato;
+    Nodo<T>* siguiente;
+    Nodo<T>* anterior;
+
+    Nodo(T valor):
+        dato(valor), siguiente(nullptr), anterior(nullptr) {}
+};
 
 template <typename T>
 class ListaDoble{
     private:
         Nodo<T>* cabeza;
         Nodo<T>* cola;
-    
+
     public:
         ListaDoble():
             cabeza(nullptr), cola(nullptr){}
