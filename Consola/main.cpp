@@ -1,6 +1,7 @@
 #include <iostream>
-#include "Menu.h"
+#include "Menu_Validaciones.h"
 #include "ListaDobleEnlazada.h"
+#include "Operaciones_ListaDoble.h"
 #include "Foto.h"
 
 using namespace std;
@@ -20,9 +21,7 @@ int main() {
             case 1: // Mostrar una Foto de la Galeria
                 menu.crearGaleria(Menu::Mostrar, listaFotos);
                 break;
-            case 2: // Buscar una foto (Pendiente)
-                break;
-            case 3: // Eliminar una Foto de la Galeria
+            case 2: // Eliminar una Foto de la Galeria
                 menu.crearGaleria(Menu::Eliminar, listaFotos);
                 break;
             default:

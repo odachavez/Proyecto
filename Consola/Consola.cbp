@@ -31,11 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Foto.h" />
-		<Unit filename="ListaDobleEnlazada.h" />
-		<Unit filename="Menu.h" />
-		<Unit filename="Nodo.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="Operaciones_ListaDoble.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
