@@ -92,10 +92,13 @@
 		</Linker>
 		<Unit filename="AgregaFoto.cpp" />
 		<Unit filename="AgregaFoto.h" />
+		<Unit filename="Foto.h" />
 		<Unit filename="GaleriaApp.cpp" />
 		<Unit filename="GaleriaApp.h" />
 		<Unit filename="GaleriaMain.cpp" />
 		<Unit filename="GaleriaMain.h" />
+		<Unit filename="ListaDobleEnlazada.h" />
+		<Unit filename="Operaciones_ListaDoble.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>

@@ -2070,3 +2070,73 @@
 1793690481 c:\users\hecto\onedrive\desktop\codigos\materia\s3_estructura de datos\codeblocks\u1\proyecto\galeria\foto.h
 	<iostream>
 
+1793687886 source:c:\users\hecto\onedrive\desktop\proyecto\galeria\agregafoto.cpp
+	<wx/dirdlg.h>
+	<wx/textctrl.h>
+	<wx/filedlg.h>
+	<wx/filename.h>
+	<wx/filefn.h>
+	<wx/msgdlg.h>
+	"AgregaFoto.h"
+	"GaleriaMain.h"
+	<wx/intl.h>
+	<wx/settings.h>
+	<wx/string.h>
+
+1793679960 c:\users\hecto\onedrive\desktop\proyecto\galeria\agregafoto.h
+	<wx/button.h>
+	<wx/frame.h>
+	<wx/panel.h>
+	<wx/sizer.h>
+	<wx/stattext.h>
+	<wx/textctrl.h>
+
+1793687731 c:\users\hecto\onedrive\desktop\proyecto\galeria\galeriamain.h
+	"ListaDobleEnlazada.h"
+	"Operaciones_ListaDoble.h"
+	"Foto.h"
+	<wx/button.h>
+	<wx/frame.h>
+	<wx/listbox.h>
+	<wx/panel.h>
+	<wx/sizer.h>
+	<wx/statbmp.h>
+	<wx/stattext.h>
+
+1793691558 c:\users\hecto\onedrive\desktop\proyecto\galeria\listadobleenlazada.h
+	<string>
+
+1793691559 c:\users\hecto\onedrive\desktop\proyecto\galeria\operaciones_listadoble.h
+	<iostream>
+	"ListaDobleEnlazada.h"
+
+1793690481 c:\users\hecto\onedrive\desktop\proyecto\galeria\foto.h
+	<iostream>
+
+1793660421 source:c:\users\hecto\onedrive\desktop\proyecto\galeria\galeriaapp.cpp
+	"GaleriaApp.h"
+	"GaleriaMain.h"
+	<wx/image.h>
+
+1793660421 c:\users\hecto\onedrive\desktop\proyecto\galeria\galeriaapp.h
+	<wx/app.h>
+
+1793703433 source:c:\users\hecto\onedrive\desktop\proyecto\galeria\galeriamain.cpp
+	"ListaDobleEnlazada.h"
+	"Operaciones_ListaDoble.h"
+	"Foto.h"
+	"GaleriaMain.h"
+	"AgregaFoto.h"
+	<wx/dir.h>
+	<wx/filename.h>
+	<wx/msgdlg.h>
+	<wx/dirdlg.h>
+	<wx/image.h>
+	<string>
+	<wx/intl.h>
+	<wx/settings.h>
+	<wx/string.h>
+
+1740933566 source:c:\users\hecto\onedrive\desktop\proyecto\galeria\resource.rc
+	"wx/msw/wx.rc"
+
