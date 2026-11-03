@@ -184,7 +184,6 @@ void GaleriaFrame::ActualizarLista(){
     }
 }
 
-// Actualiza OnbtnLocalizaClick para usar la nueva función
 void GaleriaFrame::OnbtnLocalizaClick(wxCommandEvent& event)
 {
     wxDirDialog dlg(this, _("Selecciona una ruta"), "");
@@ -221,7 +220,7 @@ void GaleriaFrame::OnButton2Click(wxCommandEvent& event)
     {
         if (wxRemoveFile(rutaCompleta))
         {
-            // Sincronizar: Buscar el nodo en tu Lista Doble y eliminarlo
+            // Sincronizar: Buscar el nodo en ListaDoble y eliminarlo
             auto actual = listaFotos.getCabeza();
             while (actual != nullptr)
             {
@@ -253,7 +252,7 @@ void GaleriaFrame::OnListBox1Select(wxCommandEvent& event)
     int seleccion = ListBox1->GetSelection();
     if (seleccion == wxNOT_FOUND) return;
 
-    // 1. Recorremos tu Lista Doble hasta el nodo seleccionado
+    //Recorremos la Lista Doble hasta el nodo seleccionado
     auto actual = listaFotos.getCabeza();
     int indiceActual = 0;
 
@@ -265,7 +264,7 @@ void GaleriaFrame::OnListBox1Select(wxCommandEvent& event)
 
     if (actual != nullptr)
     {
-        // 2. Cargar y escalar la imagen
+        //Cargar y escalar la imagen
         wxString rutaCompleta(actual->dato.getUbicacion());
         wxImage imagen;
         if (imagen.LoadFile(rutaCompleta))
@@ -294,14 +293,14 @@ void GaleriaFrame::OnListBox1Select(wxCommandEvent& event)
             mostrarFoto->Refresh();
         }
 
-        // 3. Extraer los datos usando directamente los métodos get de la clase Foto
+        //Extraer los datos usando directamente los métodos get de la clase Foto
         string titulo = actual->dato.getTitulo();
         string formato = actual->dato.getFormato();
         string ubicacion = actual->dato.getUbicacion();
         Fecha fecha = actual->dato.getFecha();
         double espacio = actual->dato.getEspacio();
 
-        // 4. Formatear el texto nativamente con wxString
+        //Formatear el texto nativamente con wxString
         wxString textoDatos = wxString::Format(
             "Título: %s\nFormato: .%s\nUbicación: %s\nFecha: %d/%d/%d\nEspacio: %.2f MB",
             titulo,
@@ -311,7 +310,7 @@ void GaleriaFrame::OnListBox1Select(wxCommandEvent& event)
             espacio
         );
 
-        // 5. Asignarlo al wxStaticText y actualizar el panel
+        //Asignarlo al wxStaticText y actualizar el panel
         txtDatos->SetLabel(textoDatos);
 
         int anchoPanel, altoPanel;
@@ -336,7 +335,6 @@ void GaleriaFrame::OnbtnAnteClick(wxCommandEvent& event)
     }
     else if (seleccionActual > 0)
     {
-        // 1. Recorrer la lista hasta el nodo seleccionado actualmente
         auto actual = listaFotos.getCabeza();
         int idx = 0;
         while (actual != nullptr && idx < seleccionActual)
@@ -345,12 +343,12 @@ void GaleriaFrame::OnbtnAnteClick(wxCommandEvent& event)
             idx++;
         }
 
-        // 2. Usar el puntero 'anterior' del nodo si existe
+        //Usar el puntero 'anterior' del nodo si existe
         if (actual != nullptr && actual->anterior != nullptr)
         {
             auto nodoAnterior = actual->anterior;
 
-            // 3. Encontrar el índice numérico correspondiente al nodo anterior para el ListBox
+            //Encontrar el índice numérico correspondiente al nodo anterior para el ListBox
             auto it = listaFotos.getCabeza();
             int nuevoIdx = 0;
             while (it != nullptr && it != nodoAnterior)
@@ -381,7 +379,6 @@ void GaleriaFrame::OnbtnSigClick(wxCommandEvent& event)
     }
     else if (seleccionActual < totalElementos - 1)
     {
-        // 1. Recorrer la lista hasta el nodo seleccionado actualmente
         auto actual = listaFotos.getCabeza();
         int idx = 0;
         while (actual != nullptr && idx < seleccionActual)
@@ -390,12 +387,10 @@ void GaleriaFrame::OnbtnSigClick(wxCommandEvent& event)
             idx++;
         }
 
-        // 2. Usar el puntero 'siguiente' del nodo si existe
         if (actual != nullptr && actual->siguiente != nullptr)
         {
             auto nodoSiguiente = actual->siguiente;
 
-            // 3. Encontrar el índice numérico correspondiente al nodo siguiente para el ListBox
             auto it = listaFotos.getCabeza();
             int nuevoIdx = 0;
             while (it != nullptr && it != nodoSiguiente)
@@ -408,7 +403,6 @@ void GaleriaFrame::OnbtnSigClick(wxCommandEvent& event)
         }
     }
 
-    // Sincronizar y actualizar la vista
     wxCommandEvent evt(wxEVT_COMMAND_LISTBOX_SELECTED, ListBox1->GetId());
     evt.SetEventObject(ListBox1);
     ProcessEvent(evt);
